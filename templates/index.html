@@ -1,0 +1,54 @@
+<html>
+
+    <head>
+        <title>Grover Circuit</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+        <div id="header">
+            <h1>Grover Simulation</h1>
+        </div>
+
+        <br/><br>
+
+        <div class="container" id="simbg">
+            <div class="row">
+                <div class="col-md-7" id="cimg"><img src="{{url_for('static', filename='circ.png')}}" class="img-responsive"></div>
+                <div class="col-md-5" id="ipart">
+                    <div>
+                        <p class="greyt" id="binp">Qubits <input type="text" id="noq"/> <button id="set">Set</button> </p>
+                    </div>
+                    <div id="oprs">
+                        <div class="range">
+                            <input type="range" min="0" max="1" value="0" id="br">
+                        </div>
+                        <p id="dispbs">Bitstring  <span id="bts"></span> </p>
+                        <button id="grover">Grover Operation</button><button id="reset">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="resrow">
+                <div class="col-md-7" id="cimg">
+                    <canvas id="myChart"></canvas>
+
+                </div>
+                <div class="col-md-3" id="vec">
+                    <canvas id="myvec" width="350" height="350"></canvas>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </body>
+    <script src="../static/js/script.js"></script>
+</html>
